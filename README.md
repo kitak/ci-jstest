@@ -40,7 +40,8 @@ sudo su - ci
 cd ~
 ```
 
-適当にテストファイルを用意しましょう(ファイル名 hello_spec.js)　　
+適当にテストファイルを用意しましょう(ファイル名 hello_spec.js)
+
 ※ このテストファイルはJasmineの形式ですが、設定ファイルを用意することでテストライブラリを切り替えることができます。
 ```javascript
 var hello = function() {
