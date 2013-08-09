@@ -41,6 +41,7 @@ cd ~
 ```
 
 適当にテストファイルを用意しましょう(ファイル名 hello_spec.js)
+※ このテストファイルはJasmineの形式ですが、設定ファイルを用意することでテストライブラリを切り替えることができます。
 ```javascript
 var hello = function() {
   return 'hello world';
@@ -60,7 +61,7 @@ Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
 
 テストを走らせる
 ```
-testem ci
+DISPLAY=:99.0 testem ci
 ```
 
 Chrome, Firefoxそれぞれでテストが通っていることが確認できます。
