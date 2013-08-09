@@ -1,4 +1,4 @@
-# testem と altria を使ったJSのテスト環境(まだ途中)
+# testem と altria を使ったJSのテスト環境(未完成)
 
 ## マニフェストを適用することで導入されるソフトウェア群
 - node.js (testemを動かすために必要)
