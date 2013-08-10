@@ -1,4 +1,4 @@
-# testem と altria を使ったJSのテスト環境(未完成)
+# testem と altria を使ったJSのテスト環境(途中)
 
 ## マニフェストを適用することで導入されるソフトウェア群
 - node.js (testemを動かすために必要)
@@ -36,13 +36,15 @@ sudo puppet apply --modulepath=modules:roles manifests/ci_jstest.pp --debug
 ```
 cd ci-jstest
 vagrant ssh
+
+# 以降はVM上での操作です
 sudo su - ci
 cd ~
 ```
 
 適当にテストファイルを用意しましょう(ファイル名 hello_spec.js)
 
-※ このテストファイルはJasmineの形式ですが、設定ファイルを用意することでテストライブラリを切り替えることができます。
+※ このテストファイルはJasmineの形式ですが、testemの設定ファイルを用意することでテストライブラリを切り替えることができます。
 ```javascript
 var hello = function() {
   return 'hello world';
@@ -55,14 +57,9 @@ describe('hello', function() {
 });
 ```
 
-仮想ディスプレイを立ち上げる
+用意した各ブラウザでテストを走らせる
 ```
-Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-```
-
-テストを走らせる
-```
-DISPLAY=:99.0 testem ci
+DISPLAY=:1 testem ci
 ```
 
 Chrome, Firefoxそれぞれでテストが通っていることが確認できます。
@@ -74,7 +71,8 @@ Chrome, Firefoxそれぞれでテストが通っていることが確認でき�
 - [ ] PhantomJSの導入
 - [ ] altriaのgit連携（hookをつかって、その都度テストを走らせる）
 - [ ] altriaとtestemの連携
-- [ ] テストだけでなく、js_hintで文法チェックをかける
+- [ ] テストだけでなく、js_hintでチェックをかける
 - [ ] testem.ymlを使ってプロジェクトごとにテストを走らせる
-- [ ] 仮想ディスプレイの起動スクリプトを用意する 
+- [x] 仮想ディスプレイの起動スクリプトを用意する 
 - [ ] 結局、IEをどうするか(testemを起動しておいてWindowsマシンからアクセスしてもらう？ Windows仮想マシンをVagrant経由で起動してやりとりさせる？)
+- [ ] sudoersの追加
