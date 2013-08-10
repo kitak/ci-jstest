@@ -69,10 +69,9 @@ Chrome, Firefoxそれぞれでテストが通っていることが確認でき�
 
 ## やり残していること 
 - [ ] PhantomJSの導入
-- [ ] altriaのgit連携（hookをつかって、その都度テストを走らせる）
-- [ ] altriaとtestemの連携
-- [ ] テストだけでなく、js_hintでチェックをかける
-- [ ] testem.ymlを使ってプロジェクトごとにテストを走らせる
+- [x] altriaのgit連携
+- [x] altriaのgithub連携
+- [ ] テストだけでなく、jshintでチェックをかける
 - [x] 仮想ディスプレイの起動スクリプトを用意する 
 - [ ] 結局、IEをどうするか(testemを起動しておいてWindowsマシンからアクセスしてもらう？ Windows仮想マシンをVagrant経由で起動してやりとりさせる？)
 - [ ] sudoersの追加
