@@ -27,6 +27,7 @@ vagrant ssh
 ## ここから先はVM上での操作です
 sudo gem install puppet --no-ri --no-rdoc 
 cd /manifest
+### ブラウザのインストールでタイムアウトしたときは再び実行してください
 sudo puppet apply --modulepath=modules:roles manifests/ci_jstest.pp --debug
 ```
 
