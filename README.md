@@ -3,6 +3,8 @@
 ## マニフェストを適用することで導入されるソフトウェア群
 - node.js (testemを動かすために必要)
 - ruby (altriaを動かすために必要)
+- mysql (altriaを動かすために必要)
+- redis (altriaを動かすために必要)
 - testem (jsのテストランナー)
 - Xvfb (仮想ディスプレイ、ブラウザを動かすために必要)
 - Firefox, Chrome (ブラウザ)
